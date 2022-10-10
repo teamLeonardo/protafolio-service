@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import { useEffect } from 'react'
 import { HeaderWraper } from '../components/Header'
 import { HomeAbout } from '../components/Home.about'
 import { HomeContact } from '../components/Home.contact'
@@ -7,8 +8,12 @@ import { HomeFooter } from '../components/Home.footer'
 import { HomePortfolio } from '../components/Home.portfolio'
 import { HomeSkills } from '../components/Home.skills'
 import { HomeWelcome } from '../components/Home.welcome'
+import { notion } from '../service/config'
 
 const Home: NextPage = () => {
+  if (notion) {
+    console.log({ notion })
+  }
   return (
     <>
       <Head>
